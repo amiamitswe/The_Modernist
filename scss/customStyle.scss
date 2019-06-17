@@ -1,0 +1,381 @@
+//web font
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('../fonts/georgia_regular/Georgia.eot?#iefix') format('embedded-opentype'), url('../fonts/georgia_regular/Georgia.woff') format('woff'), url('../fonts/georgia_regular/Georgia.ttf') format('truetype'), url('../fonts/georgia_regular/Georgia.svg#Georgia') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//all colors
+$white: #ffffff;
+$light_green: #76c38f;
+$gray: #6b6b6b;
+$light_dark: #222222;
+$main-section: #660000;
+$main-text-color: #333333;
+$footer_top_color: #303030;
+$small-color: #666666;
+$footer_top_text_color: #979797;
+$footer_bottom_color: #2b2b2b;
+
+
+* {
+  font-family: "Georgia", Arial, sans-serif;
+  color: $white;
+}
+
+p, h1, h2, h3, h4, h5, h6, div, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background-image: linear-gradient(rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background-img.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  scroll-behavior: smooth;
+
+  header {
+    //background-color: #290000;
+
+    .header-top {
+
+      border-top: 5px solid $light_green;
+      padding-top: 25px;
+
+      nav {
+        padding: .5rem 0;
+
+        .custom-brand-style {
+          font-size: 28px;
+          line-height: 28px;
+        }
+
+        .brand-span {
+          position: absolute;
+          top: 40px;
+          font-size: 11px;
+          line-height: 11px;
+          color: $footer_top_text_color;
+        }
+
+        .custom-link-position {
+          position: absolute;
+          right: 0;
+          margin-bottom: -12px;
+
+          .link-list-item {
+            font-size: 13px;
+            line-height: 15.6px;
+            font-weight: 200;
+            letter-spacing: 0.5px;
+            padding: 10px 20px;
+            transition: all 0.2s;
+          }
+
+          .link-list-item:hover {
+            background-color: $light_green;
+            border-radius: 10px;
+          }
+
+          .active {
+            background-color: $light_green;
+            border-radius: 10px;
+          }
+        }
+
+        a {
+          color: $white;
+        }
+      }
+    }
+
+    .header-body {
+      .display-flex {
+        display: flex;
+        padding: 40px 0;
+
+        .left-data {
+          padding: 90px 80px 0;
+
+          .left-data-value {
+
+
+            h1 {
+              font-size: 46px;
+              line-height: 46px;
+            }
+
+            p {
+              font-size: 12px;
+              line-height: 19.2px;
+              margin-top: 20px;
+              max-width: 320px;
+              color: $footer_top_text_color;
+            }
+
+            .slider-button {
+              font-size: 13px;
+              background-color: $light_green;
+              border-radius: 10px;
+              padding: 5px 18px;
+              border: none;
+              margin-top: 20px;
+              transition: all 0.2s;
+            }
+
+            .slider-button:hover {
+              color: $light_green;
+              background-color: transparent;
+            }
+          }
+
+        }
+
+        .right-data {
+          .custom-slider-image {
+            border-radius: 50%;
+            height: 430px;
+            width: 430px;
+            border: 25px solid $gray;
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    .section-main {
+      background-image: linear-gradient(rgba(250, 250, 250, 0.2), rgba(250, 250, 250, 0.2));
+
+      .main-top {
+        padding: 60px 0 25px;
+
+        .custom-padding {
+          padding: 0 10px;
+
+          .activities {
+            background-color: $white;
+            text-align: center;
+            padding: 0 50px;
+
+            img {
+              height: 120px;
+              width: 120px;
+              margin: 20px 0;
+            }
+
+            h2 {
+              color: $main-text-color;
+              font-size: 32px;
+              line-height: 32px;
+            }
+
+            p {
+              color: $main-text-color;
+              font-size: 12px;
+              line-height: 16.8px;
+              padding: 15px 0 20px;
+            }
+
+            transition: all 0.2s;
+          }
+
+          .activities:hover {
+            cursor: pointer;
+            background-color: $light_green;
+
+            img {
+              background-color: $white;
+            }
+
+            h2, p {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .divider {
+      position: relative;
+
+      h2 {
+        text-align: center;
+        font-size: 32px;
+        line-height: 38.4px;
+        background-color: $gray;
+        max-width: 258px;
+        margin: 0 auto;
+        padding: 6px;
+        border-radius: 10px;
+      }
+
+      h2:before {
+        content: " ";
+        border: 1px solid $gray;
+        left: 72px;
+        position: absolute;
+        top: 25px;
+        width: 35%;
+      }
+
+      h2:after {
+        content: " ";
+        border: 1px solid $gray;
+        right: 72px;
+        position: absolute;
+        top: 25px;
+        width: 35%;
+      }
+    }
+
+    .main-bottom {
+      padding: 30px 0;
+
+      .latest-work {
+        margin-bottom: 30px;
+
+        .latest-content {
+          border: 5px solid white;
+          position: relative;
+          transition: all 0.5s;
+
+          .image-custom-style {
+            width: 100%;
+            opacity: 0.8;
+            filter: grayscale(100%);
+            transition: all 0.5s;
+          }
+
+          .image-related-text {
+            position: absolute;
+            bottom: 0;
+            background-color: black;
+            opacity: 1;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            line-height: 16.8px;
+            padding: 7px 0;
+            transition: all 0.5s;
+          }
+        }
+      }
+
+      .latest-content:hover {
+        cursor: pointer;
+        border-color: $light_green;
+
+        .image-custom-style {
+          opacity: 1;
+          filter: grayscale(1%);
+        }
+
+        .image-related-text {
+          opacity: 0.2;
+        }
+      }
+    }
+  }
+
+  footer {
+    .section-footer {
+      .footer-top {
+        background-color: $footer_top_color;
+        padding-top: 35px;
+
+        .footer-top-header {
+          font-size: 16px;
+          line-height: 19.2px;
+          padding-bottom: 25px;
+        }
+
+        .from-the-blog {
+          h3 {
+            font-size: 13px;
+            line-height: 15.6px;
+            color: $light_green;
+            padding-bottom: 15px;
+          }
+
+          small {
+            font-size: 10px;
+            line-height: 12px;
+            color: $small-color;
+
+            span {
+              color: $light_green;
+            }
+          }
+
+          .date-day {
+            font-size: 10px;
+            line-height: 12px;
+            margin: 10px 0;
+            color: $footer_top_text_color;
+          }
+
+          .blog-text {
+            font-size: 13px;
+            line-height: 20.8px;
+            margin-bottom: 5px;
+            color: $footer_top_text_color;
+          }
+
+          a {
+            color: $light_green;
+            font-size: 13px;
+            line-height: 15.6px;
+            text-decoration: none;
+
+            .fa-angle-double-right {
+              color: $light_green;
+              vertical-align: middle;
+            }
+            transition: all 0.2s;
+          }
+
+          a:hover {
+            color: $white;
+
+            .fa-angle-double-right {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 15px;
+  z-index: 99;
+  font-size: 35px;
+  border: none;
+  outline: none;
+  background-color: $light_green;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#myBtn:hover {
+  background-color: $white;
+  .fa-arrow-alt-circle-up {
+    color: $light_green;
+  }
+}
+
+
+
