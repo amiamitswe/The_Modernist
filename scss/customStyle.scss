@@ -231,24 +231,15 @@ body {
         margin: 0 auto;
         padding: 6px;
         border-radius: 10px;
+        z-index: 111;
       }
 
-      h2:before {
-        content: " ";
+      .border-over-letest-work {
         border: 1px solid $gray;
-        left: 72px;
-        position: absolute;
+        width: 100%;
         top: 25px;
-        width: 35%;
-      }
-
-      h2:after {
-        content: " ";
-        border: 1px solid $gray;
-        right: 72px;
+        z-index: -1;
         position: absolute;
-        top: 25px;
-        width: 35%;
       }
     }
 

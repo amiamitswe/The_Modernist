@@ -137,21 +137,14 @@ body {
       max-width: 258px;
       margin: 0 auto;
       padding: 6px;
-      border-radius: 10px; }
-    body main .divider h2:before {
-      content: " ";
+      border-radius: 10px;
+      z-index: 111; }
+    body main .divider .border-over-letest-work {
       border: 1px solid #6b6b6b;
-      left: 72px;
-      position: absolute;
+      width: 100%;
       top: 25px;
-      width: 35%; }
-    body main .divider h2:after {
-      content: " ";
-      border: 1px solid #6b6b6b;
-      right: 72px;
-      position: absolute;
-      top: 25px;
-      width: 35%; }
+      z-index: -1;
+      position: absolute; }
   body main .main-bottom {
     padding: 30px 0; }
     body main .main-bottom .latest-work {
@@ -342,7 +335,7 @@ body {
     color: #76c38f; }
 
 @media (max-width: 320px) {
-  header .header-top nav .custom-link-position {
+  body header .header-top nav .custom-link-position {
     position: static;
     right: 0;
     margin-bottom: 0px;
